@@ -4,7 +4,7 @@
  * Space complexity describes the amount of memory and variables used additionally to input n
  *  
  *
- * consider the following algorithm below;
+ * consider the following algorithm:
  *  assuming each line of code is an operation, there are 3 operations (8, 9, 16).
  *  within the for loop, there's another 3 operations (11,12,13), where index = n
  *  this algorithm's time complexity is 3n + 3, where n = input size
@@ -25,11 +25,11 @@ function getMin(array) {
 /**
  * Asymptotic analysis describes the behaviour of functions as their inputs approach infinity.
  *  looking at the above algorithm, '+ 3' doesn't contribute much when n = 1,000,000
- *  i.e. 3(1,000,000) + 3 = 3,000,003
+ *  i.e. 3n + 3 = 3(1,000,000) + 3 = 3,000,003
  * 
  * Big O = Big Order (rate of growth) of a function
  *  if we have a program with a runtime of 7n^3 + 3n^2 + 5,
- *  the Big O notation is O(n^3), as Big O onlyu care abouts the 'biggest' terms in time & space complexity
+ *  the Big O notation is O(n^3), as Big O only cares about the 'biggest' term in time & space complexity
  *  Big O combines the concerns of both time & space with asymptotic analysis
  */
 
