@@ -14,7 +14,7 @@
  *  looping through half of n is still O(n), because we drop constants
  *  i.e. 1/2(n) => O(n)
  *  if n is bound to a number such as n=4, runtime is O(4) => O(1) as the loop is no longer dependent on the size of n
- *  basically if n equates to a number, we can calculate the specfic runtime which happens to be O(4).
+ *  because n is bound to 4 
  * 
  * consider a nested loop to iterate through a multidimensional array:
  *  t(n) = n( t(s1) + m( t(s2) + t(s3) ) )
@@ -63,3 +63,10 @@ function fn(n) {
 
     return fn(n - 1) + fn(n - 2);
 }
+
+/**
+ * Outside explanations
+ * - O(1) means that it takes a constant time. It doesn't mean that the runtime (or number of operations, etc.) is constant.
+ *   It means that there is a constant such that the runtime (or number of operations, etc.) is bounded above by the constant. 
+ *   There could still be large variance in the runtime. This is why a runtime of O(4) = O(1)
+ */
