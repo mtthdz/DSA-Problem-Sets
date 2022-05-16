@@ -43,7 +43,7 @@ function getMin(array) {
 
 
 /**
- * test function for command line
+ * test function for node environment
  */
 const testFn = () => {
     console.log('it works');
