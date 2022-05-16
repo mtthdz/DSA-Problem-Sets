@@ -40,3 +40,13 @@ function getMin(array) {
  *  - Big O cares about the algorithm's highest order in the worst case scenario
  *  - time complexity is not a direct measure of program runtime length, but how many operations it performs dependent on input size
  */
+
+
+/**
+ * test function for command line
+ */
+const testFn = () => {
+    console.log('it works');
+}
+
+export default testFn;

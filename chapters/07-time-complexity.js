@@ -57,7 +57,7 @@ for (let i = 0; i < n; i++) {
  *  the number of calls in a binary tree is 2^n - 1
  *  runtime = O(2^n), which is exponential
  */
-function fn(n) {
+export default fn = (n) => {
     if (n < 0) return 0;
     if (n < 2) return n;
 
