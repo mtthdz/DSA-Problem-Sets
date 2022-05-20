@@ -13,3 +13,39 @@
  *  shifting & splicing (respectively) which takes o(n) time, 
  *  while deleting at the end (pop) has an o(1) runtime.
  */
+
+/**
+ * Problem sets
+ * 
+ * 1. Two Pointers Pattern
+ * Find two numbers that add up to target.
+ * runtime: o(n)
+ * @param arr - the array of integers
+ * @param target - the target value
+ * @returns {number[]} - array with the values that add up to target
+ * 
+ * @example
+ * ([-5,-3,1,10], 7)        -> [-3, 10]
+ * ([-5,-3,-1,1,2], 30)     -> []
+ * ([-3,-2,-1,1,1,3,4], -4) -> [-3, -1]
+ */
+const twoSum = (arr, target) => {
+	/**
+	 * bc the array is sorted, we can set two pointers; one left and one right
+	 * if sum is bigger we move right; if smaller, we move left
+	 */
+	let left = 0;
+	let right = arr.length -1;
+
+	while(left < right) {
+		const sum = left + right;
+
+		if(sum === target) {
+			return [arr[left], arr[right]];
+		} else if(sum > target) {
+			right - 1;
+		} else {
+			left + 1;
+		}
+	}
+}
