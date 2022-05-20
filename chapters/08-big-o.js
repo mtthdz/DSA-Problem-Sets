@@ -2,7 +2,8 @@
  * 8.0
  * o(1) is constant, meaning that the number of operations executed is always the same regardless of n.
  * i.e. a function that checks if an array is empty
- * 
+ *
+ *
  * o(log n) represents logarithmic time. As input n grows, number of operations increases slowly.
  * running a binary search on a sorted* array is an example of a logarithmic algorithm. 
  * the algorithm will determine the halfway point and go left/right depending on if n is smaller/bigger
@@ -34,7 +35,8 @@ const binarySearch = (array, search, offset = 0) => {
  * o(n) represents a linear algorithm, which is the most common runtime.
  * an algorithm is usually linear when it visits every input a fixed number of times.
  * running an algorithm that looks for duplicates in an array using map is an example.
- * 
+ *
+ *
  * o(n log n) represents a linearithmic algorithm, which is the best runtime for sorting.
  * the merge-sort algorithm is an example of a linearithmic runtime:
  * @example
@@ -129,3 +131,30 @@ const duplicatesMap = (array) => {
 
 	return false;
 }
+
+/**
+ * o(n^3) are cubic runtimes, which typically involve multiple nested loops
+ * An example is using loops to determine three elements in an array that sum to a given number
+ * A good way to determine the time complexity of a function is to count the amount of nested loops;
+ * i.e. 4 nested loops would equate to o(n^4)
+ * a runtime of o(n^c) is a referred to as a polynomial runtime
+ *
+ *
+ * o(2^n) is an exponential runtime, meaning that every time n grows, the number of operations doubles
+ *
+ *
+ * o(n!) is a factorial runtime, for example getting all permutations of a word.
+ */
+
+
+/**
+ * TAKEAWAWYS
+ * o(1)       -> constant
+ * o(log n)   -> logarithmic
+ * o(n)       -> linear
+ * o(n log n) -> linearithmic
+ * o(n^2)     -> quadratic
+ * o(n^3)     -> cubic
+ * o(2^n)     -> exponential
+ * o(n!)      -> factorial
+ */
