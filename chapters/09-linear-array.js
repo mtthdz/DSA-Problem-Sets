@@ -49,3 +49,47 @@ const twoSum = (arr, target) => {
 		}
 	}
 }
+
+/**
+ * 2. Sliding Window Pattern
+ * Find the max sum of an array of integers,
+ * only taking 'k' items from the right and left side sequentially
+ * 
+ * @param {number[]} arr - The array of integers
+ * @param {number} k - the number of elements to sum up
+ * @returns {number}
+ * 
+ * @example
+ * ([1,2,3], 3)               -> (1 + 2 + 3) = 6
+ * ([1,1,1,1,200,1], 3)       -> (1 + 200 + 1) = 202
+ * ([3,10,12,4,7,2,100,1], 3) -> (3 + 1 + 100) = 104
+ */
+const maxSum = (arr, k) => {
+	/**
+	 * we start left at arr[k - 1] because sliding window
+	 * bc we start full left and go full right
+	 */
+	let left = k - 1;
+	let right = arr.length - 1;
+	let sum = 0;
+	let max = 0;
+
+	/**
+	 * this loop will add index values 0 -> k
+	 * q: runtime is o(1) bc regardless of n inputs,
+	 * it will compute the same operation?
+	 */
+	for (let i = 0; i < k; i++) {
+		sum += arr[i];
+	}
+
+	for (let i = 0; i < k; i++) {
+		sum += arr[right--] - arr[left--];
+		max = Math.max(max, sum);
+	}
+
+	console.log(max);
+	return max;
+}
+
+export default maxSum;
