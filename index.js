@@ -1,5 +1,5 @@
 import testFn from "./chapters/06-fundamentals.js";
-import maxSum from './chapters/09-linear-array.js';
+import { maxSum, maxSubArray } from './chapters/09-linear-array.js';
 
 testFn();
 

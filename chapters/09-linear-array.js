@@ -29,7 +29,7 @@
  * ([-5,-3,-1,1,2], 30)     -> []
  * ([-3,-2,-1,1,1,3,4], -4) -> [-3, -1]
  */
-const twoSum = (arr, target) => {
+export const twoSum = (arr, target) => {
 	/**
 	 * bc the array is sorted, we can set two pointers; one left and one right
 	 * if sum is bigger we move right; if smaller, we move left
@@ -50,6 +50,7 @@ const twoSum = (arr, target) => {
 	}
 }
 
+
 /**
  * 2. Sliding Window Pattern
  * Find the max sum of an array of integers,
@@ -64,7 +65,7 @@ const twoSum = (arr, target) => {
  * ([1,1,1,1,200,1], 3)       -> (1 + 200 + 1) = 202
  * ([3,10,12,4,7,2,100,1], 3) -> (3 + 1 + 100) = 104
  */
-const maxSum = (arr, k) => {
+export const maxSum = (arr, k) => {
 	/**
 	 * we start left at arr[k - 1] because sliding window
 	 * bc we start full left and go full right
@@ -92,4 +93,34 @@ const maxSum = (arr, k) => {
 	return max;
 }
 
-export default maxSum;
+
+/**
+ * 3. Max Subarray
+ * Find the maximmum sum of contiguous elements in an array.
+ * @param {number[]} a - Array
+ * @returns {number} - max sum
+ * 
+ * @example
+ * ([1,-3,10,-5])       -> 10
+ * ([-3,4,-1,2,1,-5])   -> sum[4,-1,2,1] = 6
+ * ([-2,1,-3,4,-1,3,1]) -> sum[4,-1,3,1] = 7
+ */
+export const maxSubArray = (a) => {
+	console.log(a);
+}
+
+/**
+ * 4. Buying & Selling stocks
+ * Find the max daily profit from buying and selling a stock
+ * given daily prices.
+ * @param {number[]} prices - Array with daily stock prices
+ * @returns {number} - Max profit
+ * 
+ * @example
+ * ([1,2,3])     -> buy 1, sell 3 = 2
+ * ([3,2,1])     -> no buys
+ * ([5,10,5,10]) -> buy 5, sell 10 = 5
+ */
+export const maxProfit = (prices) => {
+	console.log(prices);
+}
