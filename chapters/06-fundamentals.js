@@ -46,7 +46,7 @@ function getMin(array) {
  * test function for node environment
  */
 const testFn = () => {
-    console.log('it works');
+    console.log('start');
 }
 
 export default testFn;

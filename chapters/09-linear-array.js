@@ -35,19 +35,27 @@ export const twoSum = (arr, target) => {
 	 * if sum is bigger we move right; if smaller, we move left
 	 */
 	let left = 0;
-	let right = arr.length -1;
+	let right = arr.length - 1;
+	console.log('start');
 
 	while(left < right) {
-		const sum = left + right;
+		let sum = arr[left] + arr[right];
+		console.log([left, right], `sum ${sum}, target is ${target}`);
 
-		if(sum === target) {
-			return [arr[left], arr[right]];
-		} else if(sum > target) {
-			right - 1;
-		} else {
-			left + 1;
+		if (sum === target) {
+			console.log('found it', [left, right]);
+			return(arr[left], arr[right]);
+
+		} else if (sum < target) {
+			console.log('sum too small, move left pointer')
+			left = left + 1;
+
+		} else if (sum > target) {
+			console.log('sum too big, move right pointer')
+			right = right - 1;
 		}
 	}
+	return [];
 }
 
 
