@@ -48,6 +48,12 @@ console.log(map2.get(arr)); // 'value
  * two popular implementations of Maps:
  * Array + Hash Function       => Hash Map
  * Balanced Binary Search Tree => Tree Map
+ * 
+ * a map uses an array to store values and a hash function that translates the key into an array index
+ * one common hash function is using modulo division
+ * because no hash function is perfect, sometimes it will map two different keys to the same value, called collision
+ * to prevent collisions, it rehashes; maps double the size of its internal array when it reaches a threshold
+ * collisions and rehashes are handled automatically
  */
 
 
