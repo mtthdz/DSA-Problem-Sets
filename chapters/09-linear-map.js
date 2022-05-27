@@ -57,6 +57,39 @@ console.log(map2.get(arr)); // 'value
  */
 
 
+
+/**
+ * Problem Sets
+ * 
+ * 1. Trading Speed for Space
+ * Given a text, return the most common words in descending order. Sanitize input by removing punctuation and converting
+ * all letters to lowercase. Return the most common words in descending order.
+ * time complexity of the 3 steps:
+ *  1. lowercase = o(n)
+ *  2. clean with regex = o(n)
+ *  3. map functionality = o(n log n)
+ *
+ * @param {string} text - the text to parse
+ * @param {number} n - the number of results
+ * @return {string[]}
+ * 
+ * @example
+ * ('The map, maps keys to values; keys can be anything.', 1)               -> ['keys]
+ * ('Look at it! What is it? It does look like my code from 1 year ago', 2) -> ['it', 'look']
+ * ('a; a,b, a\'s c A!; b,B,   c.', 4)                                      -> ['a', 'b', 'c', 's']
+ */
+export const mostCommonWords = (text, n = 1) => {
+  const words = text.toLowerCase().split(/\W+/);
+  const map = words.reduce((m, w) => m.set(w, 1 + (m.get(w) || 0)), new Map());
+
+  return Array
+    .from(map.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, n)
+    .map((w) => w[0]);
+}
+
+
 /**
  * Outside explanations
  * ----
